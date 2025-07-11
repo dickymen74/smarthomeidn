@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Smarthome Indonesia | Pendaftaran Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #10b981;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(16, 185, 129, 0.8) 100%);
+        }
+        
+        .package-card {
+            transition: all 0.3s ease;
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .package-popular {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background-color: var(--secondary);
+            color: white;
+            padding: 2px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-sm fixed w-full z-10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Beranda</a>
+                    <a href="#paket" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Paket</a>
+                    <a href="#faq" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">FAQ</a>
+                    <a href="#testimoni" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Testimoni</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-500 hover:bg-gray-100 focus:outline-none" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white shadow-lg" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium">Beranda</a>
+                <a href="#paket" class="text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium">Paket</a>
+                <a href="#faq" class="text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium">FAQ</a>
+                <a href="#testimoni" class="text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium">Testimoni</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex items-center pt-16" id="home">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Internet Super Cepat untuk Rumah Modern Anda</h1>
+                <p class="text-xl mb-8">Nikmati jaringan fiber optic terbaik dengan kecepatan stabil hingga 15Mbps untuk seluruh perangkat smart home Anda.</p>
+                
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <div class="flex items-center">
+                        <div class="bg-green-100 text-green-800 rounded-full p-2 mr-3">
+                            <i class="fas fa-bolt text-sm"></i>
+                        </div>
+                        <span>Jaringan Fiber Optic</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-green-100 text-green-800 rounded-full p-2 mr-3">
+                            <i class="fas fa-wifi text-sm"></i>
+                        </div>
+                        <span>Up To 15Mbps</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-green-100 text-green-800 rounded-full p-2 mr-3">
+                            <i class="fas fa-headset text-sm"></i>
+                        </div>
+                        <span>Customer Service 24/7</span>
+                    </div>
+                </div>
+                
+                <a href="#daftar" class="btn-primary text-white font-bold py-4 px-8 rounded-lg inline-block">Daftar Sekarang <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+            
+            <div class="relative">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e4eea515-3ec6-492b-9e29-7fff8fbdb28e.png" alt="Keluarga sedang menggunakan berbagai perangkat smart home dengan senyuman" class="rounded-xl shadow-2xl border-8 border-white">
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 text-blue-800 rounded-full p-3 mr-3">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">#1 Internet Provider</p>
+                            <p class="text-sm text-gray-600">Berdasarkan survei konsumen 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paket Internet Section -->
+    <section class="py-20 bg-white" id="paket">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pilih Paket Internet Terbaik</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Berbagai pilihan paket dengan kecepatan berbeda untuk kebutuhan rumah modern Anda</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Paket Basic -->
+                <div class="package-card bg-white rounded-xl shadow-md overflow-hidden relative">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">FiberLite</h3>
+                        <p class="text-gray-600 mb-6">Cocok untuk penggunaan standar</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-900">Rp150.000</span>
+                            <span class="text-gray-500">/bulan</span>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>7 Mbps</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Unlimited Quota</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Ratio 1:1</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>1-4 Device Standar</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="#daftar" class="btn-primary text-white font-bold py-3 px-6 rounded-lg w-full text-center block">Pilih Paket</a>
+                    </div>
+                </div>
+                
+                <!-- Paket Family -->
+                <div class="package-card bg-white rounded-xl shadow-lg overflow-hidden relative border-2 border-blue-500 transform scale-105">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">FiberMax</h3>
+                        <p class="text-gray-600 mb-6">Ideal untuk keluarga dengan banyak perangkat</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-900">Rp200.000</span>
+                            <span class="text-gray-500">/bulan</span>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>9 Mbps</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Unlimited Quota</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Ratio 1:1</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>1-7 Device Standar</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="#daftar" class="btn-primary text-white font-bold py-3 px-6 rounded-lg w-full text-center block">Pilih Paket</a>
+                    </div>
+                </div>
+                
+                <!-- Paket Premium -->
+                <div class="package-card bg-white rounded-xl shadow-md overflow-hidden relative">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">FiberUltra</h3>
+                        <p class="text-gray-600 mb-6">Untuk kebutuhan streaming & gaming 4K</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-900">Rp300.000</span>
+                            <span class="text-gray-500">/bulan</span>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>12 Mbps</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Unlimited Quota</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Ratio 1:1</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>1-10 Device Standar</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="#daftar" class="btn-primary text-white font-bold py-3 px-6 rounded-lg w-full text-center block">Pilih Paket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Pendaftaran Section -->
+    <section class="py-20 bg-gray-50" id="daftar">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12 bg-blue-600 text-white">
+                        <h2 class="text-3xl font-bold mb-6">Daftar Internet Smarthome</h2>
+                        <p class="mb-6">Isi formulir berikut untuk memulai proses pendaftaran. Tim kami akan menghubungi Anda dalam waktu 1x24 jam.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span>Proses mudah & cepat</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span>Instalasi oleh teknisi ahli</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span>Garansi jaringan 99% uptime</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c5712a14-2967-48d2-b236-6abaa4820982.png" alt="Teknisi profesional sedang memasang perangkat internet fiber optic di rumah modern" class="rounded-lg">
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <form id="registrationForm">
+                            <div class="mb-6">
+                                <label for="nama" class="block text-gray-700 font-medium mb-2">Nama Lengkap <span class="text-red-500">*</span></label>
+                                <input type="text" id="nama" name="nama" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email <span class="text-red-500">*</span></label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="telepon" class="block text-gray-700 font-medium mb-2">Nomor Telepon/WA <span class="text-red-500">*</span></label>
+                                <input type="tel" id="telepon" name="telepon" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="alamat" class="block text-gray-700 font-medium mb-2">Alamat Lengkap <span class="text-red-500">*</span></label>
+                                <textarea id="alamat" name="alamat" rows="3" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200"></textarea>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="paket" class="block text-gray-700 font-medium mb-2">Pilih Paket <span class="text-red-500">*</span></label>
+                                <select id="paket" name="paket" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+                                    <option value="" disabled selected>Pilih paket internet</option>
+                                    <option value="basic">FiberLite - 7Mbps (Rp150.000/bulan)</option>
+                                    <option value="family">FiberMax - 9Mbps (Rp2000.000/bulan)</option>
+                                    <option value="premium">FiberUltra - 12Mbps (Rp300.000/bulan)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-medium mb-2">Tanggal Instalasi <span class="text-red-500">*</span></label>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="tanggal" class="block text-sm text-gray-600 mb-1">Tanggal</label>
+                                        <input type="date" id="tanggal" name="tanggal" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+                                    </div>
+                                    <div>
+                                        <label for="waktu" class="block text-sm text-gray-600 mb-1">Waktu</label>
+                                        <select id="waktu" name="waktu" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+                                            <option value="pagi">Pagi (09:00-12:00)</option>
+                                            <option value="siang">Siang (13:00-16:00)</option>
+                                            <option value="sore">Sore (16:00-19:00)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary text-white font-bold py-4 px-8 rounded-lg w-full">Kirim Pendaftaran</button>
+                            
+                            <p class="mt-4 text-sm text-gray-600">Dengan mengisi formulir ini, Anda menyetujui <a href="#" class="text-blue-600 hover:underline">Syarat & Ketentuan</a> kami.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section class="py-20 bg-blue-50" id="testimoni">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Apa Kata Pelanggan Kami</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Bagikan pengalaman nyata dari pelanggan setia Smarthome Indonesia</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimoni 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1d2097a5-800e-4a1c-916c-01a366d33f72.png" alt="Potret Bapak Andi, pengguna Smarthome Indonesia dengan latar kantor modern" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Bapak Andi</h4>
+                            <p class="text-gray-600 text-sm">Pengguna sejak 2019</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Sejak menggunakan Smarthome Internet, kerja dari rumah jadi lebih lancar. Video conference tanpa lag dan upload file cepat sekali."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimoni 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3173c891-2781-4bea-aeea-64a2a92c3f1f.png" alt="Potret Ibu Sari, pengguna Smarthome Indonesia dengan latar taman rumah" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Ibu Sari</h4>
+                            <p class="text-gray-600 text-sm">Pengguna sejak 2021</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Teknisi datang tepat waktu dan instalasi sangat profesional. Anak-anak bisa streaming YouTube dan saya bisa kerja online tanpa gangguan."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimoni 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/043d710e-5426-4cbf-9ae9-4aec0b7251c6.png" alt="Potret Keluarga Budi, pengguna Smarthome Indonesia dengan latar ruang keluarga modern" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Keluarga Budi</h4>
+                            <p class="text-gray-600 text-sm">Pengguna sejak 2022</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Paket Family sangat worth it untuk kami yang punya 5 gadget dan 2 TV. Semua bisa dipakai sekaligus tanpa masalah."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white" id="faq">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pertanyaan yang Sering Diajukan</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Temukan jawaban atas pertanyaan umum tentang layanan kami</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-item w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium text-lg">Berapa lama proses instalasi setelah pendaftaran?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 py-4 hidden">
+                        <p class="text-gray-700">Tim kami akan menghubungi Anda dalam waktu 1x24 jam setelah pendaftaran untuk mengkonfirmasi jadwal instalasi. Instalasi biasanya dilakukan dalam 2-3 hari kerja setelah verifikasi data.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-item w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium text-lg">Apa saja perlengkapan yang akan dipasang oleh teknisi?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 py-4 hidden">
+                        <p class="text-gray-700">Teknisi kami akan memasang ONT (Optical Network Terminal), router, dan melakukan konfigurasi jaringan sesuai paket yang Anda pilih.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-item w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium text-lg">Apakah ada biaya instalasi </span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 py-4 hidden">
+                        <p class="text-gray-700">Ya, Biaya instalasi Sebesar Rp150.000 dibayarkan saat installasi selesai dilakukan. selain itu Tidak ada biaya tambahan kecuali jika diperlukan modifikasi khusus seperti pengeboran tambahan atau kabel ekstra yang melebihi standar.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-item w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium text-lg">Bagaimana jika terjadi gangguan jaringan?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 py-4 hidden">
+                        <p class="text-gray-700">Kami menyediakan layanan maintenance 24/7. Anda dapat menghubungi customer service melalui telepon, WhatsApp, atau aplikasi kami. Gangguan prioritas akan ditangani maksimal dalam 4 jam setelah laporan diterima.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-600 to-green-500 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Siap Upgrade Rumah Anda ke Smart Home?</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8">Daftarkan sekarang dan dapatkan gratis konsultasi smart home dari ahli kami.</p>
+            <a href="#daftar" class="bg-white text-blue-600 font-bold py-4 px-8 rounded-lg inline-block hover:bg-gray-100 transition">Daftar Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- Logo & About -->
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b9fa6474-7a68-45ac-8cca-6329210cfb1b.png" alt="Logo Smarthome Indonesia versi putih dengan icon rumah modern" class="h-10 mb-6">
+                    <p class="text-gray-400">Penyedia layanan internet fiber optic dan solusi smart home terbaik di Indonesia. Memberikan pengalaman internet stabil dan aman sejak 2018.</p>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Tautan Cepat</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="#paket" class="text-gray-400 hover:text-white transition">Paket Internet</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#testimoni" class="text-gray-400 hover:text-white transition">Testimoni</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">Jl. Kp.Sawah,RT.03/07 Ds.Pandansari Kec.Ciawi Kab.Bogor</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">0858-8886-5030</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">0858-8886-5030</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">mdickydarmawan.it@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Media Sosial</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    
+                    <h4 class="font-bold text-lg mt-8 mb-4">Download Aplikasi</h4>
+                    <div class="space-y-3">
+                        <a href="#" class="inline-block">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fcc9e058-4b95-447d-a3e0-87f36795870b.png" alt="Download aplikasi Smarthome Indonesia di Google Play Store" class="h-10">
+                        </a>
+                        <a href="#" class="inline-block">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2ced668e-0f27-4b50-8de0-7ae5cee3ded1.png" alt="Download aplikasi Smarthome Indonesia di Apple App Store" class="h-10">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Smarthome Indonesia. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Syarat & Ketentuan</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Kebijakan Privasi</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Cookie</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden" id="successModal">
+        <div class="bg-white rounded-xl max-w-md w-full mx-4 p-8 text-center">
+            <div class="bg-green-100 text-green-800 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-check text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Pendaftaran Berhasil!</h3>
+            <p class="text-gray-700 mb-6">Terima kasih telah mendaftar layanan Smarthome Internet. Tim kami akan menghubungi Anda dalam waktu 1x24 jam untuk konfirmasi instalasi.</p>
+            <button class="btn-primary text-white font-bold py-3 px-6 rounded-lg" id="closeModal">Tutup</button>
+        </div>
+    </div>
+
+    <script>
+        // Telegram Bot Configuration
+        const chatId = "-4624553260";
+        const botToken = "7606943270:AAFWw5je8TuEru4uaC9F9wVZc29qx1Jgdzg";
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.nextElementSibling;
+                const icon = item.querySelector('i');
+                
+                // Toggle content
+                content.classList.toggle('hidden');
+                
+                // Rotate icon
+                icon.classList.toggle('rotate-180');
+                
+                // Close other open items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.nextElementSibling.classList.add('hidden');
+                        otherItem.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+        
+        // Form Validation and Submission
+        const registrationForm = document.getElementById('registrationForm');
+        const successModal = document.getElementById('successModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        registrationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simple validation
+            let isValid = true;
+            const inputs = registrationForm.querySelectorAll('input[required], select[required], textarea[required]');
+            
+            inputs.forEach(input => {
+                if (!input.value) {
+                    input.classList.add('border-red-500');
+                    input.classList.remove('border-gray-300');
+                    isValid = false;
+                } else {
+                    input.classList.remove('border-red-500');
+                    input.classList.add('border-gray-300');
+                }
+            });
+            
+            // Validate email format
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                email.classList.add('border-red-500');
+                email.classList.remove('border-gray-300');
+                isValid = false;
+            }
+            
+            // Validate phone number (minimum 9 digits)
+            const phone = document.getElementById('telepon');
+            const phoneRegex = /^\d{9,}$/;
+            if (!phoneRegex.test(phone.value.replace(/\D/g, ''))) {
+                phone.classList.add('border-red-500');
+                phone.classList.remove('border-gray-300');
+                isValid = false;
+            }
+            
+            // If valid, send to Telegram and show success modal
+            if (isValid) {
+                const formData = new FormData(registrationForm);
+                const data = Object.fromEntries(formData.entries());
+                
+                const message = `📌 *Pendaftaran Baru* 📌\n
+📛 *Nama:* ${data.nama}
+📧 *Email:* ${data.email}
+📱 *Telp/WA:* ${data.telepon}
+🏠 *Alamat:* ${data.alamat}
+📡 *Paket:* ${data.paket}
+🗓️ *Tanggal Instalasi:* ${data.tanggal} (${data.waktu})`;
+                
+                const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
+                
+                fetch(url)
+                    .then(() => {
+                        successModal.classList.remove('hidden');
+                        registrationForm.reset();
+                    })
+                    .catch(error => {
+                        console.error('Error sending to Telegram:', error);
+                        alert('Pendaftaran berhasil tetapi gagal mengirim notifikasi. Silakan hubungi admin.');
+                    });
+            }
+        });
+        
+        closeModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
